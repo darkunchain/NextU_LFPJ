@@ -1,0 +1,42 @@
+#logo {
+  width: 150px;
+}
+
+.nav {
+  display: inline;
+  position: relative;
+}
+
+#navicon {
+  position: absolute;
+  right: 2.5em;
+  top: 2em;
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav {
+    display: none;
+  }
+  #navicon {
+    display: block;
+  }
+  #logo {
+    width: 100px !important;
+  }
+}
+
+
+@media (max-width:780px) {
+
+  .menuOn #logo {display:none;}
+
+  .nav {display:none;}
+
+  .menuOn .nav {display:inline;}
+}
