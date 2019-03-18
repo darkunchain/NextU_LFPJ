@@ -1,0 +1,23 @@
+{
+  "name": "buscador_nodejs",
+  "version": "1.0.0",
+  "description": "Actividad Buscador NextU Luis Fernando Prieto",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src"
+  },
+  "keywords": [
+    "buscador",
+    "NodeJs"
+  ],
+  "author": "Luis Fernando Prieto",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
