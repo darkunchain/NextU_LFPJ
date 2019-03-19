@@ -41,19 +41,16 @@
             <div class="row invisible" id="personalizada">
               <div class="row">
                 <label for="ciudad">Ciudad:</label>
-                <select id="ciudad">
+                <select id="ciudad" onchange="ShowSelected()">
                   <option value="">Escoge una ciudad</option>
-                  <option value="New York">New York</option>
-                  <option value="Orlando">Orlando</option>
-                  <option value="Los Angeles">Los Angeles</option>
-                  <option value="Houston">Houston</option>
-                  <option value="Washington">Washington</option>
-                  <option value="Miami">Miami</option>                  
+                  <% for (var i = 0; i < ciudades.length; i++) { %>
+                  <option value="<%= ciudades[i] %>"><%= ciudades[i] %></option>
+                  <% } %>
                 </select>
               </div>
               <div class="row">
                 <label for="tipo">Tipo:</label>
-                <select id="tipo">
+                <select id="tipo" onchange="ShowSelected()">
                   <option value="">Escoge un tipo</option>
                   <% for (var i = 0; i < tipos.length; i++) { %>
                   <option value="<%= tipos[i] %>"><%= tipos[i] %></option>
@@ -62,23 +59,8 @@
               </div>
               <div class="row">
                 <label for="rangoPrecio">Precio:</label>
-                <input type="text" id="rangoPrecio">
+                <input type="text" id="rangoPrecio" onchange="ShowSelected()">
               </div>
-
-              <div class="wrap-input1 validate-input" data-validate = "Name is required">
-                <input class="input1" type="text" name="name" placeholder="Name">
-                <span class="shadow-input1"></span>
-              </div>
-
-              <select id="otr5o" >
-                  <input class="input2" type="text" name="texto2" placeholder="Name">
-                <option value="">Escoge una ciudad</option>
-                <option value="1">1</option>
-                <option value="2">2</option>                              
-              </select>
-
-
-
             </div>
             <button id="buscar" class="btn waves-effect waves-light blue" type="button"
             onclick="this.form.submit()">Ver Todos</button>

@@ -16,6 +16,13 @@ nav div > h4 {
   padding: 20px !important;
 }
 
+.container{
+  position: fixed !important;
+  padding-left: 30px;
+  width: 20em;
+  background: white;
+}
+
 .panel {
   position: fixed;
 }
@@ -48,4 +55,11 @@ div.lista {
 }
 select {
   display: inline-block !important;
+  font-size: 0.8rem;
+  width: 60%;
+  background: #dadfe2
+}
+
+span.irs {
+  width: 96% !important;
 }

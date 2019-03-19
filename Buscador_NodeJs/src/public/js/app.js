@@ -22,3 +22,10 @@ function setSearch() {
 }
 
 setSearch()
+
+// function ShowSelected(){
+//   document.getElementById("ciudad").value;  
+//   document.getElementById("tipo").value;  
+//   document.getElementById("rangoPrecio").value;
+//   console.log(objeto)
+//   }
