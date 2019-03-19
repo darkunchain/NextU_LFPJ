@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const morgan =require('morgan')
 
 // inicializacion
 const app = express();
@@ -12,6 +13,10 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+
+// middlewares
+app.use(morgan('dev'));
+app.use(express.urlencoded({extended: false}));
 
 // archivos estaticos
 app.use(express.static(path.join(__dirname, 'public')));
