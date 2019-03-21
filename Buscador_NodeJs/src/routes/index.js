@@ -9,7 +9,11 @@ express().use(bodyParser.json());
 //datos para select
 var ciudades = []
 var tipos = []
+var ciudadesall = []
+var tiposall = []
 for (var i = 0; i < datos.length; i++) {
+  ciudadesall.push(datos[i].Ciudad)
+  tiposall.push(datos[i].Tipo)
   if (ciudades.indexOf(datos[i].Ciudad) == -1) {
     ciudades.push(datos[i].Ciudad)
   }
@@ -20,7 +24,7 @@ for (var i = 0; i < datos.length; i++) {
 
 
 router.get('/', (req, res) => {  
-  res.render('index', { datos, ciudades, tipos })
+  res.render('index', { datos, ciudades, tipos, tiposall, ciudadesall })
 });
 
 router.post('/', (req, res) => { 

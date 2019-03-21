@@ -23,9 +23,23 @@ function setSearch() {
 
 setSearch()
 
-// function ShowSelected(){
-//   document.getElementById("ciudad").value;  
-//   document.getElementById("tipo").value;  
-//   document.getElementById("rangoPrecio").value;
-//   console.log(objeto)
-//   }
+function buscarpropiedad(id) {
+
+  var busquedavalor = document.getElementById(id).value;
+  var var1 = document.getElementById('var1');
+  console.log('var1:',var1);
+  var datosback = `<%= datos.Ciudad %>`;
+  console.log('datos backend:',datosback);
+  var des = document.getElementById('ciudad');
+  console.log('busquedavalor antes:',busquedavalor);
+
+  for (var i = 0; i < des.length - 1; i++) {
+    var st = des[i].text;
+    if (st.search(busquedavalor) > -1) {
+      var temp = des[i];
+      des.addEventListener(temp, des[0]);
+    }
+  }
+  console.log('des',des,'st',st,'busquedavalor',busquedavalor);
+}
+
