@@ -31,10 +31,8 @@ function buscarpropiedad(id) {
   var var4 = document.getElementById('var4');
   var var5 = document.getElementById('var5');
   var var6 = document.getElementById('var6');
-  var newjson = document.getElementById('datosall');
-  var todos = document.getElementById('total').innerHTML;
-  offid("proptodas"); 
-
+  var newjson = document.getElementById('datosall').innerHTML;
+  var todos = document.getElementById('total').innerHTML;  
   console.log('newjson', newjson)
   var d = document.getElementById("propbusqueda");
   var d1 = document.getElementById("reemplaza");
@@ -42,14 +40,9 @@ function buscarpropiedad(id) {
   var sp1 = document.createElement("div");
   sp1.setAttribute("id", "reemplaza");
   parentDiv.replaceChild(sp1, d1);
-
-  
-  
-  
-
+  offid("proptodas");
   for (var i = 0; i < todos; i++) {
     if (var1[i] == " " + buscarvalor) {
-      
       var2 = document.getElementById('tip' + i).innerHTML;
       var3 = document.getElementById('dir' + i).innerHTML;
       var var4 = document.getElementById('tel' + i).innerHTML;
@@ -61,11 +54,6 @@ function buscarpropiedad(id) {
 
     }
   }
-
-
-
-
-
   onid("propbusqueda");
   console.log('buscarvalor:', buscarvalor);
 }
