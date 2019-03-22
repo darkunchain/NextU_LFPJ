@@ -176,6 +176,16 @@
       }        
     </script>
   </div>
+  <div hidden id="datosall">
+      <% async function newjson() { %>
+        <% var newjson = [] %>
+        <% for await (var it of datos) { %>
+          <% newjson[it.Id - 1] = it %>
+          <% } %>          
+          <% return newjson %>
+          <% } newjson(); %> 
+    
+  </div>
 
 
 

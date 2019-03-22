@@ -11,24 +11,43 @@ var ciudades = []
 var tipos = []
 var ciudadesall = []
 var tiposall = []
-for (var i = 0; i < datos.length; i++) {
-  ciudadesall.push(datos[i].Ciudad)
-  tiposall.push(datos[i].Tipo)
-  if (ciudades.indexOf(datos[i].Ciudad) == -1) {
-    ciudades.push(datos[i].Ciudad)
+var datosall = []
+var inc1=0
+var inc2=0
+
+async function arreglos() {
+  for await (var it of datos) {
+    ciudadesall[it.Id - 1] = it.Ciudad
+    tiposall[it.Id - 1] = it.Tipo;
+    datosall[it.Id - 1] = it
+    if (ciudades.indexOf(it.Ciudad) == -1) {
+      ciudades[inc1] = it.Ciudad
+      inc1 = inc1 + 1
+    }
+    if (tipos.indexOf(it.Tipo) == -1) {
+      tipos[inc2] = it.Tipo
+      inc2 = inc2 + 1
+    }
   }
-  if (tipos.indexOf(datos[i].Tipo) == -1) {
-    tipos.push(datos[i].Tipo)
-  }
-}
+} arreglos();
+
+
+// async function newjson() {
+//   var newjson = []
+//   for await (var it of datos) {
+//     newjson[it.Id - 1] = it   
+//   }
+//   console.log(newjson)
+// } newjson();
+
+
 
 
 router.get('/', (req, res) => {  
-  res.render('index', { datos, ciudades, tipos, tiposall, ciudadesall })
+  res.render('index', { datos, ciudades, tipos, tiposall, ciudadesall, datosall })
 });
 
-router.post('/', (req, res) => { 
-  
+router.post('/', (req, res) => {  
   console.log('bodypost',req.body);
   res.render('index', { datos, ciudades, tipos})
 });
