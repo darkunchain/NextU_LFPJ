@@ -37,12 +37,12 @@
               Activada
             </label>
           </div>
-          <!--  Busqueda personalizada -->
+          <!--  Busqueda personalizada -->         
           <form action="/" method="POST">
             <div class="row invisible" id="personalizada">
               <div class="row">
                 <label for="ciudad">Ciudad:</label>
-                <select id="ciudad" onchange="buscarpropiedad('ciudad')">
+                <select id="selectciudad" onchange="buscarpropiedad('ciudad')">
                   <option value="">Escoge una ciudad</option>
                   <% for (var i = 0; i < ciudades.length; i++) { %>
                   <option value="<%= ciudades[i] %>"><%= ciudades[i] %></option>
@@ -70,6 +70,19 @@
       </div>
     </div>
 
+    <!--  %%%%%%%%%%  Debug para mostrar datos %%%%%%%%%%%  
+    <div class="row">
+      <div class="col m4">
+        <div class="card horizontal">
+          <div class="container center-align">
+              <%=ciudades %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+      %%%%%%%%%%  Debug para mostrar datos %%%%%%%%%%%  -->
 
     <div id="proptodas" class="col m8 lista">
       <% if (datos) { %>
@@ -119,12 +132,58 @@
     </div>
 
     <div id="propbusqueda" class="col m8 lista">
-
-      <div id="reemplaza"></div>
-
+      <div id="reemplaza">
+        
+        
+        <% if (datos) { %>
+        <% for(var i = 0; i < datos.length; i++) { %>
+        <div hidden class="card horizontal">
+          <div class="card-image">
+            <img src="img/home.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <div>
+                <b>Direccion: </b><span id="dir<%= i %>"></span><%= datos[i].Direccion %></span>
+                <p></p>
+              </div>
+              <div>
+                <b>Ciudad: </b> <span id="ciu<%= i %>"> <%= datos[i].Ciudad %></span>
+                <p></p>
+              </div>
+              <div>
+                <b>Telefono: </b><span id="tel<%= i %>"></span><%= datos[i].Telefono %></span>
+                <p></p>
+              </div>
+              <div>
+                <b>Código postal: </b><span id="zip<%= i %>"></span><%= datos[i].Codigo_postal %></span>
+                <p></p>
+              </div>
+              <div>
+                <b>Precio: </b><span id="pre<%= i %>"></span><%= datos[i].Precio %></span>
+                <p></p>
+              </div>
+              <div>
+                <b>Tipo: </b><span id="tip<%= i %>"> <%= datos[i].Tipo %></span>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="card-action right-align">
+            <a href="#">Ver más</a>
+          </div>
+        </div>
+        <% } %>
+        <div hidden id="total">
+          <%= i %>
+        </div>
+        <% } %>
+    
+      </div>
+    
     </div>
-
-  </div>
+    
+    </div>
   
 
   <div hidden id="var1">

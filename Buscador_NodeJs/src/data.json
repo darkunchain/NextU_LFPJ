@@ -6,7 +6,8 @@
 		"Telefono": "334-052-0954",
 		"Codigo_Postal": "85328",
 		"Tipo": "Casa",
-		"Precio": "$30,746"
+		"Precio": "$30,746",
+		"Valor" : "30746"
 	},
 	{
 		"Id": 2,
@@ -15,7 +16,8 @@
 		"Telefono": "488-441-5521",
 		"Codigo_Postal": "04436",
 		"Tipo": "Casa de Campo",
-		"Precio": "$71,045"
+		"Precio": "$71,045",
+		"Valor" : "71045"
 	},
 	{
 		"Id": 3,
@@ -24,7 +26,8 @@
 		"Telefono": "623-807-2869",
 		"Codigo_Postal": "89804",
 		"Tipo": "Casa de Campo",
-		"Precio": "$36,087"
+		"Precio": "$36,087",
+		"Valor" : "36087"
 	},
 	{
 		"Id": 4,
@@ -33,7 +36,8 @@
 		"Telefono": "997-640-8188",
 		"Codigo_Postal": "94526-134",
 		"Tipo": "Casa de Campo",
-		"Precio": "$16,048"
+		"Precio": "$16,048",
+		"Valor" : "16048"
 	},
 	{
 		"Id": 5,
@@ -42,7 +46,8 @@
 		"Telefono": "802-414-8872",
 		"Codigo_Postal": "162925",
 		"Tipo": "Casa",
-		"Precio": "$45,912"
+		"Precio": "$45,912",
+		"Valor" : "45912"
 	},
 	{
 		"Id": 6,
@@ -51,7 +56,8 @@
 		"Telefono": "355-601-5749",
 		"Codigo_Postal": "210020",
 		"Tipo": "Casa de Campo",
-		"Precio": "$64,370"
+		"Precio": "$64,370",
+		"Valor" : "64370"
 	},
 	{
 		"Id": 7,
@@ -60,7 +66,8 @@
 		"Telefono": "557-228-6918",
 		"Codigo_Postal": "16794",
 		"Tipo": "Casa",
-		"Precio": "$2,846"
+		"Precio": "$2,846",
+		"Valor" : "2846"
 	},
 	{
 		"Id": 8,
@@ -69,7 +76,8 @@
 		"Telefono": "390-713-8687",
 		"Codigo_Postal": "70689",
 		"Tipo": "Apartamento",
-		"Precio": "$60,951"
+		"Precio": "$60,951",
+		"Valor" : "60951"
 	},
 	{
 		"Id": 9,
@@ -78,7 +86,8 @@
 		"Telefono": "578-170-6179",
 		"Codigo_Postal": "P0C 0G3",
 		"Tipo": "Casa de Campo",
-		"Precio": "$58,902"
+		"Precio": "$58,902",
+		"Valor" : "58902"
 	},
 	{
 		"Id": 10,
@@ -87,7 +96,8 @@
 		"Telefono": "870-559-3430",
 		"Codigo_Postal": "7029",
 		"Tipo": "Casa",
-		"Precio": "$17,759"
+		"Precio": "$17,759",
+		"Valor" : "17759"
 	},
 	{
 		"Id": 11,
@@ -96,7 +106,8 @@
 		"Telefono": "147-920-5435",
 		"Codigo_Postal": "5237JG",
 		"Tipo": "Casa",
-		"Precio": "$91,067"
+		"Precio": "$91,067",
+		"Valor" : "91067"
 	},
 	{
 		"Id": 12,
@@ -105,7 +116,8 @@
 		"Telefono": "056-617-2556",
 		"Codigo_Postal": "684445",
 		"Tipo": "Casa",
-		"Precio": "$36,155"
+		"Precio": "$36,155",
+		"Valor" : "36155"
 	},
 	{
 		"Id": 13,
@@ -114,7 +126,8 @@
 		"Telefono": "252-330-0116",
 		"Codigo_Postal": "5422",
 		"Tipo": "Apartamento",
-		"Precio": "$78,947"
+		"Precio": "$78,947",
+		"Valor" : "78947"
 	},
 	{
 		"Id": 14,
@@ -123,7 +136,8 @@
 		"Telefono": "986-825-6899",
 		"Codigo_Postal": "37045",
 		"Tipo": "Casa de Campo",
-		"Precio": "$51,817"
+		"Precio": "$51,817",
+		"Valor" : "51817"
 	},
 	{
 		"Id": 15,
@@ -132,7 +146,8 @@
 		"Telefono": "200-935-8531",
 		"Codigo_Postal": "RI9 6RT",
 		"Tipo": "Casa",
-		"Precio": "$39,561"
+		"Precio": "$39,561",
+		"Valor" : "39561"
 	},
 	{
 		"Id": 16,
@@ -141,7 +156,8 @@
 		"Telefono": "436-742-7954",
 		"Codigo_Postal": "31519",
 		"Tipo": "Apartamento",
-		"Precio": "$52,433"
+		"Precio": "$52,433",
+		"Valor" : "52433"
 	},
 	{
 		"Id": 17,
@@ -150,7 +166,8 @@
 		"Telefono": "383-252-8216",
 		"Codigo_Postal": "83594",
 		"Tipo": "Apartamento",
-		"Precio": "$85,641"
+		"Precio": "$85,641",
+		"Valor" : "85641"
 	},
 	{
 		"Id": 18,
@@ -159,7 +176,8 @@
 		"Telefono": "487-609-0106",
 		"Codigo_Postal": "753543",
 		"Tipo": "Casa de Campo",
-		"Precio": "$78,854"
+		"Precio": "$78,854",
+		"Valor" : "78854"
 	},
 	{
 		"Id": 19,
@@ -168,7 +186,8 @@
 		"Telefono": "788-832-7076",
 		"Codigo_Postal": "783917",
 		"Tipo": "Casa de Campo",
-		"Precio": "$64,471"
+		"Precio": "$64,471",
+		"Valor" : "64471"
 	},
 	{
 		"Id": 20,
@@ -177,7 +196,8 @@
 		"Telefono": "335-278-9678",
 		"Codigo_Postal": "8635",
 		"Tipo": "Apartamento",
-		"Precio": "$47,420"
+		"Precio": "$47,420",
+		"Valor" : "47420"
 	},
 	{
 		"Id": 21,
@@ -186,7 +206,8 @@
 		"Telefono": "167-013-1429",
 		"Codigo_Postal": "15971",
 		"Tipo": "Casa de Campo",
-		"Precio": "$28,795"
+		"Precio": "$28,795",
+		"Valor" : "28795"
 	},
 	{
 		"Id": 22,
@@ -195,7 +216,8 @@
 		"Telefono": "491-394-8799",
 		"Codigo_Postal": "37-346",
 		"Tipo": "Apartamento",
-		"Precio": "$69,505"
+		"Precio": "$69,505",
+		"Valor" : "69505"
 	},
 	{
 		"Id": 23,
@@ -204,7 +226,8 @@
 		"Telefono": "339-324-8859",
 		"Codigo_Postal": "0318YB",
 		"Tipo": "Casa de Campo",
-		"Precio": "$73,231"
+		"Precio": "$73,231",
+		"Valor" : "73231"
 	},
 	{
 		"Id": 24,
@@ -213,7 +236,8 @@
 		"Telefono": "049-063-4896",
 		"Codigo_Postal": "5411",
 		"Tipo": "Casa de Campo",
-		"Precio": "$83,847"
+		"Precio": "$83,847",
+		"Valor" : "83847"
 	},
 	{
 		"Id": 25,
@@ -222,7 +246,8 @@
 		"Telefono": "257-364-7011",
 		"Codigo_Postal": "1045SO",
 		"Tipo": "Casa",
-		"Precio": "$93,907"
+		"Precio": "$93,907",
+		"Valor" : "93907"
 	},
 	{
 		"Id": 26,
@@ -231,7 +256,8 @@
 		"Telefono": "363-540-9113",
 		"Codigo_Postal": "9802",
 		"Tipo": "Casa de Campo",
-		"Precio": "$21,796"
+		"Precio": "$21,796",
+		"Valor" : "21796"
 	},
 	{
 		"Id": 27,
@@ -240,7 +266,8 @@
 		"Telefono": "512-886-8792",
 		"Codigo_Postal": "1038",
 		"Tipo": "Casa",
-		"Precio": "$97,134"
+		"Precio": "$97,134",
+		"Valor" : "97134"
 	},
 	{
 		"Id": 28,
@@ -249,7 +276,8 @@
 		"Telefono": "423-014-6013",
 		"Codigo_Postal": "61483",
 		"Tipo": "Casa",
-		"Precio": "$32,659"
+		"Precio": "$32,659",
+		"Valor" : "32659"
 	},
 	{
 		"Id": 29,
@@ -258,7 +286,8 @@
 		"Telefono": "334-030-0048",
 		"Codigo_Postal": "9738",
 		"Tipo": "Apartamento",
-		"Precio": "$14,560"
+		"Precio": "$14,560",
+		"Valor" : "14560"
 	},
 	{
 		"Id": 30,
@@ -267,7 +296,8 @@
 		"Telefono": "242-441-7733",
 		"Codigo_Postal": "38707",
 		"Tipo": "Casa de Campo",
-		"Precio": "$69,433"
+		"Precio": "$69,433",
+		"Valor" : "69433"
 	},
 	{
 		"Id": 31,
@@ -276,7 +306,8 @@
 		"Telefono": "710-649-0830",
 		"Codigo_Postal": "57503",
 		"Tipo": "Casa de Campo",
-		"Precio": "$1,986"
+		"Precio": "$1,986",
+		"Valor" : "1986"
 	},
 	{
 		"Id": 32,
@@ -285,7 +316,8 @@
 		"Telefono": "535-501-0707",
 		"Codigo_Postal": "0242AN",
 		"Tipo": "Casa",
-		"Precio": "$73,668"
+		"Precio": "$73,668",
+		"Valor" : "73668"
 	},
 	{
 		"Id": 33,
@@ -294,7 +326,8 @@
 		"Telefono": "956-749-3273",
 		"Codigo_Postal": "94323",
 		"Tipo": "Apartamento",
-		"Precio": "$85,996"
+		"Precio": "$85,996",
+		"Valor" : "85996"
 	},
 	{
 		"Id": 34,
@@ -303,7 +336,8 @@
 		"Telefono": "904-312-9292",
 		"Codigo_Postal": "894922",
 		"Tipo": "Casa",
-		"Precio": "$38,835"
+		"Precio": "$38,835",
+		"Valor" : "38835"
 	},
 	{
 		"Id": 35,
@@ -312,7 +346,8 @@
 		"Telefono": "168-671-0953",
 		"Codigo_Postal": "5574",
 		"Tipo": "Casa de Campo",
-		"Precio": "$62,069"
+		"Precio": "$62,069",
+		"Valor" : "62069"
 	},
 	{
 		"Id": 36,
@@ -321,7 +356,8 @@
 		"Telefono": "670-701-8060",
 		"Codigo_Postal": "20705",
 		"Tipo": "Casa de Campo",
-		"Precio": "$32,174"
+		"Precio": "$32,174",
+		"Valor" : "32174"
 	},
 	{
 		"Id": 37,
@@ -330,7 +366,8 @@
 		"Telefono": "326-023-8622",
 		"Codigo_Postal": "02187",
 		"Tipo": "Apartamento",
-		"Precio": "$23,492"
+		"Precio": "$23,492",
+		"Valor" : "23492"
 	},
 	{
 		"Id": 38,
@@ -339,7 +376,8 @@
 		"Telefono": "343-695-3228",
 		"Codigo_Postal": "56309",
 		"Tipo": "Casa de Campo",
-		"Precio": "$42,579"
+		"Precio": "$42,579",
+		"Valor" : "42579"
 	},
 	{
 		"Id": 39,
@@ -348,7 +386,8 @@
 		"Telefono": "259-039-5762",
 		"Codigo_Postal": "6038",
 		"Tipo": "Apartamento",
-		"Precio": "$41,843"
+		"Precio": "$41,843",
+		"Valor" : "41843"
 	},
 	{
 		"Id": 40,
@@ -357,7 +396,8 @@
 		"Telefono": "809-587-9484",
 		"Codigo_Postal": "69526",
 		"Tipo": "Casa de Campo",
-		"Precio": "$94,728"
+		"Precio": "$94,728",
+		"Valor" : "94128"
 	},
 	{
 		"Id": 41,
@@ -366,7 +406,8 @@
 		"Telefono": "354-038-8533",
 		"Codigo_Postal": "65211",
 		"Tipo": "Casa de Campo",
-		"Precio": "$90,451"
+		"Precio": "$90,451",
+		"Valor" : "90451"
 	},
 	{
 		"Id": 42,
@@ -375,7 +416,8 @@
 		"Telefono": "186-671-4205",
 		"Codigo_Postal": "893592",
 		"Tipo": "Casa de Campo",
-		"Precio": "$2,261"
+		"Precio": "$2,261",
+		"Valor" : "2261"
 	},
 	{
 		"Id": 43,
@@ -384,7 +426,8 @@
 		"Telefono": "906-342-4567",
 		"Codigo_Postal": "4263",
 		"Tipo": "Casa de Campo",
-		"Precio": "$76,404"
+		"Precio": "$76,404",
+		"Valor" : "76404"
 	},
 	{
 		"Id": 44,
@@ -393,7 +436,8 @@
 		"Telefono": "336-903-7567",
 		"Codigo_Postal": "92501",
 		"Tipo": "Casa",
-		"Precio": "$2,055"
+		"Precio": "$2,055",
+		"Valor" : "2055"
 	},
 	{
 		"Id": 45,
@@ -402,7 +446,8 @@
 		"Telefono": "723-547-1102",
 		"Codigo_Postal": "G9T 9P2",
 		"Tipo": "Casa de Campo",
-		"Precio": "$99,508"
+		"Precio": "$99,508",
+		"Valor" : "99508"
 	},
 	{
 		"Id": 46,
@@ -411,7 +456,8 @@
 		"Telefono": "594-072-4670",
 		"Codigo_Postal": "58567",
 		"Tipo": "Casa",
-		"Precio": "$7,952"
+		"Precio": "$7,952",
+		"Valor" : "7952"
 	},
 	{
 		"Id": 47,
@@ -420,7 +466,8 @@
 		"Telefono": "328-063-3034",
 		"Codigo_Postal": "0547ID",
 		"Tipo": "Casa",
-		"Precio": "$48,882"
+		"Precio": "$48,882",
+		"Valor" : "48882"
 	},
 	{
 		"Id": 48,
@@ -429,7 +476,8 @@
 		"Telefono": "210-220-4305",
 		"Codigo_Postal": "J6H 9S9",
 		"Tipo": "Apartamento",
-		"Precio": "$33,141"
+		"Precio": "$33,141",
+		"Valor" : "33141"
 	},
 	{
 		"Id": 49,
@@ -438,7 +486,8 @@
 		"Telefono": "362-652-3567",
 		"Codigo_Postal": "63897",
 		"Tipo": "Apartamento",
-		"Precio": "$88,980"
+		"Precio": "$88,980",
+		"Valor" : "88980"
 	},
 	{
 		"Id": 50,
@@ -447,7 +496,8 @@
 		"Telefono": "593-092-8585",
 		"Codigo_Postal": "90970-060",
 		"Tipo": "Casa",
-		"Precio": "$35,831"
+		"Precio": "$35,831",
+		"Valor" : "35831"
 	},
 	{
 		"Id": 51,
@@ -456,7 +506,8 @@
 		"Telefono": "611-764-9648",
 		"Codigo_Postal": "727883",
 		"Tipo": "Casa de Campo",
-		"Precio": "$99,230"
+		"Precio": "$99,230",
+		"Valor" : "99230"
 	},
 	{
 		"Id": 52,
@@ -465,7 +516,8 @@
 		"Telefono": "057-000-7888",
 		"Codigo_Postal": "6390",
 		"Tipo": "Apartamento",
-		"Precio": "$82,679"
+		"Precio": "$82,679",
+		"Valor" : "82679"
 	},
 	{
 		"Id": 53,
@@ -474,7 +526,8 @@
 		"Telefono": "742-185-0661",
 		"Codigo_Postal": "4116",
 		"Tipo": "Casa",
-		"Precio": "$96,998"
+		"Precio": "$96,998",
+		"Valor" : "96998"
 	},
 	{
 		"Id": 54,
@@ -483,7 +536,8 @@
 		"Telefono": "565-750-7079",
 		"Codigo_Postal": "7217",
 		"Tipo": "Casa",
-		"Precio": "$54,710"
+		"Precio": "$54,710",
+		"Valor" : "54710"
 	},
 	{
 		"Id": 55,
@@ -492,7 +546,8 @@
 		"Telefono": "695-936-1302",
 		"Codigo_Postal": "83809",
 		"Tipo": "Casa",
-		"Precio": "$96,281"
+		"Precio": "$96,281",
+		"Valor" : "96281"
 	},
 	{
 		"Id": 56,
@@ -501,7 +556,8 @@
 		"Telefono": "859-638-8140",
 		"Codigo_Postal": "843642",
 		"Tipo": "Casa",
-		"Precio": "$3,829"
+		"Precio": "$3,829",
+		"Valor" : "3829"
 	},
 	{
 		"Id": 57,
@@ -510,7 +566,8 @@
 		"Telefono": "324-489-2139",
 		"Codigo_Postal": "66013",
 		"Tipo": "Casa de Campo",
-		"Precio": "$70,069"
+		"Precio": "$70,069",
+		"Valor" : "70069"
 	},
 	{
 		"Id": 58,
@@ -519,7 +576,8 @@
 		"Telefono": "626-297-1082",
 		"Codigo_Postal": "9133",
 		"Tipo": "Casa de Campo",
-		"Precio": "$26,514"
+		"Precio": "$26,514",
+		"Valor" : "26514"
 	},
 	{
 		"Id": 59,
@@ -528,7 +586,8 @@
 		"Telefono": "842-236-6720",
 		"Codigo_Postal": "188876",
 		"Tipo": "Casa",
-		"Precio": "$68,927"
+		"Precio": "$68,927",
+		"Valor" : "68927"
 	},
 	{
 		"Id": 60,
@@ -537,7 +596,8 @@
 		"Telefono": "114-453-9481",
 		"Codigo_Postal": "64899",
 		"Tipo": "Casa",
-		"Precio": "$67,772"
+		"Precio": "$67,772",
+		"Valor" : "67772"
 	},
 	{
 		"Id": 61,
@@ -546,7 +606,8 @@
 		"Telefono": "337-930-6310",
 		"Codigo_Postal": "5290KA",
 		"Tipo": "Casa",
-		"Precio": "$71,048"
+		"Precio": "$71,048",
+		"Valor" : "71048"
 	},
 	{
 		"Id": 62,
@@ -555,7 +616,8 @@
 		"Telefono": "235-726-7602",
 		"Codigo_Postal": "Y4V 5A1",
 		"Tipo": "Casa de Campo",
-		"Precio": "$90,138"
+		"Precio": "$90,138",
+		"Valor" : "90138"
 	},
 	{
 		"Id": 63,
@@ -564,7 +626,8 @@
 		"Telefono": "292-391-9640",
 		"Codigo_Postal": "26271",
 		"Tipo": "Casa de Campo",
-		"Precio": "$70,212"
+		"Precio": "$70,212",
+		"Valor" : "70212"
 	},
 	{
 		"Id": 64,
@@ -573,7 +636,8 @@
 		"Telefono": "909-006-0105",
 		"Codigo_Postal": "93246",
 		"Tipo": "Casa",
-		"Precio": "$74,320"
+		"Precio": "$74,320",
+		"Valor" : "74320"
 	},
 	{
 		"Id": 65,
@@ -582,7 +646,8 @@
 		"Telefono": "820-970-3451",
 		"Codigo_Postal": "35826",
 		"Tipo": "Apartamento",
-		"Precio": "$15,782"
+		"Precio": "$15,782",
+		"Valor" : "15782"
 	},
 	{
 		"Id": 66,
@@ -591,7 +656,8 @@
 		"Telefono": "339-015-5616",
 		"Codigo_Postal": "8625GM",
 		"Tipo": "Casa de Campo",
-		"Precio": "$27,530"
+		"Precio": "$27,530",
+		"Valor" : "27530"
 	},
 	{
 		"Id": 67,
@@ -600,7 +666,8 @@
 		"Telefono": "712-181-4815",
 		"Codigo_Postal": "857132",
 		"Tipo": "Casa de Campo",
-		"Precio": "$56,359"
+		"Precio": "$56,359",
+		"Valor" : "56359"
 	},
 	{
 		"Id": 68,
@@ -609,7 +676,8 @@
 		"Telefono": "286-311-5133",
 		"Codigo_Postal": "39945",
 		"Tipo": "Casa de Campo",
-		"Precio": "$29,789"
+		"Precio": "$29,789",
+		"Valor" : "29789"
 	},
 	{
 		"Id": 69,
@@ -618,7 +686,8 @@
 		"Telefono": "790-137-7352",
 		"Codigo_Postal": "71804",
 		"Tipo": "Casa",
-		"Precio": "$57,408"
+		"Precio": "$57,408",
+		"Valor" : "57408"
 	},
 	{
 		"Id": 70,
@@ -627,7 +696,8 @@
 		"Telefono": "888-946-8086",
 		"Codigo_Postal": "F7 0YF",
 		"Tipo": "Casa",
-		"Precio": "$87,871"
+		"Precio": "$87,871",
+		"Valor" : "87871"
 	},
 	{
 		"Id": 71,
@@ -636,7 +706,8 @@
 		"Telefono": "760-938-1297",
 		"Codigo_Postal": "19418",
 		"Tipo": "Casa",
-		"Precio": "$43,727"
+		"Precio": "$43,727",
+		"Valor" : "43727"
 	},
 	{
 		"Id": 72,
@@ -645,7 +716,8 @@
 		"Telefono": "690-850-4520",
 		"Codigo_Postal": "L18 9SC",
 		"Tipo": "Casa de Campo",
-		"Precio": "$30,425"
+		"Precio": "$30,425",
+		"Valor" : "30425"
 	},
 	{
 		"Id": 73,
@@ -654,7 +726,8 @@
 		"Telefono": "213-536-0655",
 		"Codigo_Postal": "21712",
 		"Tipo": "Casa",
-		"Precio": "$23,311"
+		"Precio": "$23,311",
+		"Valor" : "23311"
 	},
 	{
 		"Id": 74,
@@ -663,7 +736,8 @@
 		"Telefono": "367-551-7660",
 		"Codigo_Postal": "YY0A 3TD",
 		"Tipo": "Casa de Campo",
-		"Precio": "$72,611"
+		"Precio": "$72,611",
+		"Valor" : "72611"
 	},
 	{
 		"Id": 75,
@@ -672,7 +746,8 @@
 		"Telefono": "261-470-7647",
 		"Codigo_Postal": "14844",
 		"Tipo": "Casa",
-		"Precio": "$98,815"
+		"Precio": "$98,815",
+		"Valor" : "98815"
 	},
 	{
 		"Id": 76,
@@ -681,7 +756,8 @@
 		"Telefono": "041-009-6788",
 		"Codigo_Postal": "8230",
 		"Tipo": "Casa",
-		"Precio": "$50,861"
+		"Precio": "$50,861",
+		"Valor" : "50861"
 	},
 	{
 		"Id": 77,
@@ -690,7 +766,8 @@
 		"Telefono": "534-916-5827",
 		"Codigo_Postal": "37234",
 		"Tipo": "Casa de Campo",
-		"Precio": "$87,808"
+		"Precio": "$87,808",
+		"Valor" : "87808"
 	},
 	{
 		"Id": 78,
@@ -699,7 +776,8 @@
 		"Telefono": "494-431-4661",
 		"Codigo_Postal": "IC54 7IK",
 		"Tipo": "Casa",
-		"Precio": "$93,263"
+		"Precio": "$93,263",
+		"Valor" : "93263"
 	},
 	{
 		"Id": 79,
@@ -708,7 +786,8 @@
 		"Telefono": "050-082-4431",
 		"Codigo_Postal": "99-113",
 		"Tipo": "Apartamento",
-		"Precio": "$99,947"
+		"Precio": "$99,947",
+		"Valor" : "99947"
 	},
 	{
 		"Id": 80,
@@ -717,7 +796,8 @@
 		"Telefono": "909-320-3004",
 		"Codigo_Postal": "03082",
 		"Tipo": "Casa",
-		"Precio": "$69,922"
+		"Precio": "$69,922",
+		"Valor" : "69922"
 	},
 	{
 		"Id": 81,
@@ -726,7 +806,8 @@
 		"Telefono": "196-562-2718",
 		"Codigo_Postal": "A8Z 9N1",
 		"Tipo": "Casa",
-		"Precio": "$25,541"
+		"Precio": "$25,541",
+		"Valor" : "25541"
 	},
 	{
 		"Id": 82,
@@ -735,7 +816,8 @@
 		"Telefono": "272-977-8230",
 		"Codigo_Postal": "G1C 0L5",
 		"Tipo": "Apartamento",
-		"Precio": "$97,152"
+		"Precio": "$97,152",
+		"Valor" : "97152"
 	},
 	{
 		"Id": 83,
@@ -744,7 +826,8 @@
 		"Telefono": "580-328-0397",
 		"Codigo_Postal": "63477",
 		"Tipo": "Casa",
-		"Precio": "$70,429"
+		"Precio": "$70,429",
+		"Valor" : "70429"
 	},
 	{
 		"Id": 84,
@@ -753,7 +836,8 @@
 		"Telefono": "451-067-8082",
 		"Codigo_Postal": "1688",
 		"Tipo": "Casa de Campo",
-		"Precio": "$9,426"
+		"Precio": "$9,426",
+		"Valor" : "9426"
 	},
 	{
 		"Id": 85,
@@ -762,7 +846,8 @@
 		"Telefono": "818-932-2502",
 		"Codigo_Postal": "3977",
 		"Tipo": "Apartamento",
-		"Precio": "$82,655"
+		"Precio": "$82,655",
+		"Valor" : "82655"
 	},
 	{
 		"Id": 86,
@@ -771,7 +856,8 @@
 		"Telefono": "453-561-4737",
 		"Codigo_Postal": "3773",
 		"Tipo": "Casa de Campo",
-		"Precio": "$29,354"
+		"Precio": "$29,354",
+		"Valor" : "29354"
 	},
 	{
 		"Id": 87,
@@ -780,7 +866,8 @@
 		"Telefono": "020-821-1050",
 		"Codigo_Postal": "54983",
 		"Tipo": "Apartamento",
-		"Precio": "$96,267"
+		"Precio": "$96,267",
+		"Valor" : "96267"
 	},
 	{
 		"Id": 88,
@@ -789,7 +876,8 @@
 		"Telefono": "773-538-6408",
 		"Codigo_Postal": "Q28 3PO",
 		"Tipo": "Casa",
-		"Precio": "$61,691"
+		"Precio": "$61,691",
+		"Valor" : "61691"
 	},
 	{
 		"Id": 89,
@@ -798,7 +886,8 @@
 		"Telefono": "670-572-1780",
 		"Codigo_Postal": "4484KP",
 		"Tipo": "Casa",
-		"Precio": "$95,859"
+		"Precio": "$95,859",
+		"Valor" : "95858"
 	},
 	{
 		"Id": 90,
@@ -807,7 +896,8 @@
 		"Telefono": "821-444-9824",
 		"Codigo_Postal": "5962",
 		"Tipo": "Apartamento",
-		"Precio": "$82,504"
+		"Precio": "$82,504",
+		"Valor" : "82504"
 	},
 	{
 		"Id": 91,
@@ -816,7 +906,8 @@
 		"Telefono": "601-485-1049",
 		"Codigo_Postal": "703157",
 		"Tipo": "Casa",
-		"Precio": "$80,965"
+		"Precio": "$80,965",
+		"Valor" : "80965"
 	},
 	{
 		"Id": 92,
@@ -825,7 +916,8 @@
 		"Telefono": "440-469-6769",
 		"Codigo_Postal": "61790-368",
 		"Tipo": "Casa de Campo",
-		"Precio": "$49,957"
+		"Precio": "$49,957",
+		"Valor" : "49957"
 	},
 	{
 		"Id": 93,
@@ -834,7 +926,8 @@
 		"Telefono": "510-056-8508",
 		"Codigo_Postal": "612383",
 		"Tipo": "Casa",
-		"Precio": "$23,498"
+		"Precio": "$23,498",
+		"Valor" : "23498"
 	},
 	{
 		"Id": 94,
@@ -843,7 +936,8 @@
 		"Telefono": "581-094-0717",
 		"Codigo_Postal": "X45 0FA",
 		"Tipo": "Casa de Campo",
-		"Precio": "$8,187"
+		"Precio": "$8,187",
+		"Valor" : "8187"
 	},
 	{
 		"Id": 95,
@@ -852,7 +946,8 @@
 		"Telefono": "751-107-3929",
 		"Codigo_Postal": "R1B 4Y7",
 		"Tipo": "Apartamento",
-		"Precio": "$32,660"
+		"Precio": "$32,660",
+		"Valor" : "32660"
 	},
 	{
 		"Id": 96,
@@ -861,7 +956,8 @@
 		"Telefono": "782-078-8565",
 		"Codigo_Postal": "86541",
 		"Tipo": "Casa",
-		"Precio": "$39,721"
+		"Precio": "$39,721",
+		"Valor" : "39.721"
 	},
 	{
 		"Id": 97,
@@ -870,7 +966,8 @@
 		"Telefono": "845-500-3131",
 		"Codigo_Postal": "7112",
 		"Tipo": "Casa de Campo",
-		"Precio": "$97,135"
+		"Precio": "$97,135",
+		"Valor" : "97135"
 	},
 	{
 		"Id": 98,
@@ -879,7 +976,8 @@
 		"Telefono": "751-125-7876",
 		"Codigo_Postal": "34981",
 		"Tipo": "Apartamento",
-		"Precio": "$6,672"
+		"Precio": "$6,672",
+		"Valor" : "6672"
 	},
 	{
 		"Id": 99,
@@ -888,7 +986,8 @@
 		"Telefono": "262-186-7762",
 		"Codigo_Postal": "7131",
 		"Tipo": "Casa de Campo",
-		"Precio": "$17,160"
+		"Precio": "$17,160",
+		"Valor" : "17160"
 	},
 	{
 		"Id": 100,
@@ -897,6 +996,7 @@
 		"Telefono": "113-637-2816",
 		"Codigo_Postal": "598072",
 		"Tipo": "Casa",
-		"Precio": "$42,804"
+		"Precio": "$42,804",
+		"Valor" : "42804"
 	}
 ]

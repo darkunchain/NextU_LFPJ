@@ -12,13 +12,15 @@ var tipos = []
 var ciudadesall = []
 var tiposall = []
 var datosall = []
+var precioall = []
 var inc1=0
 var inc2=0
 
 async function arreglos() {
   for await (var it of datos) {
     ciudadesall[it.Id - 1] = it.Ciudad
-    tiposall[it.Id - 1] = it.Tipo;
+    tiposall[it.Id - 1] = it.Tipo
+    precioall[it.Id - 1] = it.Valor
     datosall[it.Id - 1] = it
     if (ciudades.indexOf(it.Ciudad) == -1) {
       ciudades[inc1] = it.Ciudad
@@ -44,7 +46,7 @@ async function arreglos() {
 
 
 router.get('/', (req, res) => {  
-  res.render('index', { datos, ciudades, tipos, tiposall, ciudadesall, datosall })
+  res.render('index', { datos, ciudades, tipos, tiposall, ciudadesall, datosall, precioall })
 });
 
 router.post('/', (req, res) => {  
