@@ -16,6 +16,7 @@ var precioall = []
 var inc1=0
 var inc2=0
 
+
 async function arreglos() {
   for await (var it of datos) {
     ciudadesall[it.Id - 1] = it.Ciudad
@@ -44,14 +45,15 @@ async function arreglos() {
 
 
 
-
 router.get('/', (req, res) => {  
   res.render('index', { datos, ciudades, tipos, tiposall, ciudadesall, datosall, precioall })
 });
 
 router.post('/', (req, res) => {  
-  console.log('bodypost',req.body);
-  res.render('index', { datos, ciudades, tipos})
+  let bodyciudad = req.body.selectciudad;
+  let bodytipo = req.body.selecttipo;
+  //res.send( { datos, ciudades, tipos, tiposall, ciudadesall, datosall, precioall,bodyciudad, bodytipo })
+  res.write('</body></html>');
 });
 
 

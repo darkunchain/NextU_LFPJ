@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const morgan =require('morgan');
-
+var bodyParser = require('body-parser')
 
 
 // inicializacion
@@ -19,8 +19,8 @@ app.set('view engine', 'ejs');
 
 // middlewares
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended: false}));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 // archivos estaticos
 app.use(express.static(path.join(__dirname, 'public')));

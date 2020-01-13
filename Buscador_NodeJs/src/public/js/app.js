@@ -22,42 +22,26 @@ function setSearch() {
 }
 setSearch()
 
-
-function buscarpropiedad(id) {
-  var buscarvalor = document.getElementById(id).value;
-  var var1 = document.getElementById('var1');
-  var var2 = document.getElementById('var2');
-  var var3 = document.getElementById('var3');
-  var var4 = document.getElementById('var4');
-  var var5 = document.getElementById('var5');
-  var var6 = document.getElementById('var6');
-  var newjson = document.getElementById('datosall').innerHTML;
-  var todos = document.getElementById('total').innerHTML;  
-  console.log('newjson', newjson)
-  var d = document.getElementById("propbusqueda");
-  var d1 = document.getElementById("reemplaza");
-  var parentDiv = d1.parentNode;
-  var sp1 = document.createElement("div");
-  sp1.setAttribute("id", "reemplaza");
-  parentDiv.replaceChild(sp1, d1);
+$("#selectciudad").change(function (){
+  var vselectciudad = $("#selectciudad").val();
+  var vselecttipo = $("#selecttipo").val();
+  console.log(vselectciudad,' , ',vselecttipo);
   offid("proptodas");
-  for (var i = 0; i < todos; i++) {
-    if (var1[i] == " " + buscarvalor) {
-      var2 = document.getElementById('tip' + i).innerHTML;
-      var3 = document.getElementById('dir' + i).innerHTML;
-      var var4 = document.getElementById('tel' + i).innerHTML;
-      // var var5 = document.getElementById('zip' + i).innerHTML;
-      // var var6 = document.getElementById('pre' + i).innerHTML;
-      //console.log('dir' + i,'var2:',var2,'var3:',var3,'var4:',var4,'var5:',var5)
-      console.log('var3', var3)
-      escribir(reemplaza, var1[i], var2, var3, var4, var5, var6);
-
-    }
-  }
   onid("propbusqueda");
-  console.log('buscarvalor:', buscarvalor);
-}
+  document.getElementById("formbuscar").submit();
 
+})
+
+$("#selecttipo").change(function (){
+  var vselectciudad = $("#selectciudad").val();
+  var vselecttipo = $("#selecttipo").val();
+  console.log(vselectciudad,' , ',vselecttipo);
+  offid("proptodas");
+  onid("propbusqueda");
+  document.getElementById("formbuscar").submit();
+
+
+})
 
 function offid(id) {
   var x = document.getElementById(id);

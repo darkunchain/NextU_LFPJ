@@ -38,11 +38,11 @@
             </label>
           </div>
           <!--  Busqueda personalizada -->         
-          <form action="/" method="POST">
+          <form name="formbuscar" id="formbuscar" action="/" method="POST" target="request">
             <div class="row invisible" id="personalizada">
               <div class="row">
                 <label for="ciudad">Ciudad:</label>
-                <select id="selectciudad" onchange="buscarpropiedad('ciudad')">
+                <select name="selectciudad" id="selectciudad" >
                   <option value="">Escoge una ciudad</option>
                   <% for (var i = 0; i < ciudades.length; i++) { %>
                   <option value="<%= ciudades[i] %>"><%= ciudades[i] %></option>
@@ -51,7 +51,7 @@
               </div>
               <div class="row">
                 <label for="tipo">Tipo:</label>
-                <select id="tipo" onchange="buscarpropiedad('tipo')">
+                <select  name="selecttipo" id="selecttipo" >
                   <option value="">Escoge un tipo</option>
                   <% for (var i = 0; i < tipos.length; i++) { %>
                   <option value="<%= tipos[i] %>"><%= tipos[i] %></option>
@@ -75,7 +75,7 @@
       <div class="col m4">
         <div class="card horizontal">
           <div class="container center-align">
-              <%=ciudades %>
+              <%=tipos %>
 
           </div>
         </div>
@@ -137,6 +137,7 @@
         
         <% if (datos) { %>
         <% for(var i = 0; i < datos.length; i++) { %>
+          <% if (datos[i].Ciudad=="New York") { %>
         <div hidden class="card horizontal">
           <div class="card-image">
             <img src="img/home.jpg">
@@ -173,6 +174,7 @@
             <a href="#">Ver más</a>
           </div>
         </div>
+        <% } %>
         <% } %>
         <div hidden id="total">
           <%= i %>
