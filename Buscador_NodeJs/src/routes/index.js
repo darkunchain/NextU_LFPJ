@@ -1,11 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const datos = require('../data.json');
-const bodyParser = require('body-parser');
+var busqueda = {}
 
 
-express().use(bodyParser.urlencoded({ extended: false }))
-express().use(bodyParser.json());
 //datos para select
 var ciudades = []
 var tipos = []
@@ -38,42 +36,35 @@ async function arreglos() {
 } arreglos();
 
 
-// async function newjson() {
-//   var newjson = []
-//   for await (var it of datos) {
-//     newjson[it.Id - 1] = it   
-//   }
-//   console.log(newjson)
-// } newjson();
 
-
-
-router.get('/', (req, res) => {  
-  sess=req.session;  
-  bodyciudad=sess.ciudad;
-  bodytipo=sess.tipo;
-  console.log('sess.ciudad: ', sess.ciudad, '  sess.tipo: ', sess.tipo)
-  res.render('index', { datos, ciudades, tipos, tiposall, ciudadesall, datosall, precioall, bodyciudad, bodytipo })  
-  
+router.get('/', (req, res) => { 
+  res.render('index', { datos, ciudades, tipos, tiposall, ciudadesall, datosall, precioall, bodyciudad, bodytipo });   
 });
 
-router.post('/', (req, res) => {  
-  sess=req.session;
-  sess.ciudad = req.body.vselectciudad,
-  sess.tipo = req.body.vselecttipo
-  //console.log('bodyciudad: ', sess.ciudad, '  bodytipo: ', sess.tipo)  
-  res.redirect('/')
+router.post('/', (req, res) => {     
+ 
 })
 
-/* Ruta original
-router.post('/', (req, res) => {  
-  var bodyciudad = req.body.vselectciudad;
-  var bodytipo = req.body.vselecttipo;
-  //res.send( { bodyciudad, bodytipo })
-  //res.write('</body></html>');
-  //res.end('done')
-  //res.redirect('/');
-}); */
+
+router.get('/datos', (req, res) => {
+res.json(datos);
+});
+
+router.post('/datos', (req, res) => {  
+  const  selectciudad = req.body.selectciudad;
+  const  selecttipo = req.body.selecttipo;  
+  datos.forEach((dato, i) => {    
+    if (dato.Ciudad = selectciudad) {
+      busqueda.Ciudad = dato.Ciudad     
+    }    
+  });
+  console.log(busqueda)
+  res.json('post successfully');  
+  });
+
+
+
+
 
 
 router.get('/form', (req, res) => {  

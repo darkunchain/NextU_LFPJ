@@ -7,77 +7,107 @@ $("#rangoPrecio").ionRangeSlider({
   from: 1000,
   to: 20000,
   prefix: "$"
-})
+});
 
 function setSearch() {
-  let busqueda = $('#checkPersonalizada')
-  busqueda.on('change', (e) => {
+  let busqueda = $("#checkPersonalizada");
+  busqueda.on("change", e => {
     if (this.customSearch == false) {
-      this.customSearch = true
+      this.customSearch = true;
     } else {
-      this.customSearch = false
+      this.customSearch = false;
     }
-    $('#personalizada').toggleClass('invisible')
-  })
+    $("#personalizada").toggleClass("invisible");
+  });
 }
-setSearch()
+setSearch();
 
-$("#selectciudad").change(function (event){
+$(function() {
+
+/////////////////////////  Document Ready function /////////////////////////
+  $(document).ready(function() {
+    $.ajax({
+      global: false,
+      url: "/datos",
+      success: function(datos) {
+        //console.log("data cargada", datos);
+        let proptodas = $("#proptodas");
+        proptodas.html("");
+        datos.forEach(dato => {
+          proptodas.append(`
+            <div hidden class="card horizontal">
+              <div class="card-image">
+                <img src="img/home.jpg">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content" id="card-content">
+                  <div>
+                    <b>Direccion: </b><span id="dir${dato.id}"></span>${dato.Direccion}</span>
+                    <p></p>
+                  </div>
+                  <div>
+                    <b>Ciudad: </b> <span id="ciu${dato.id}"> ${dato.Ciudad}</span>
+                    <p></p>
+                  </div>
+                  <div>
+                    <b>Telefono: </b><span id="tel${dato.id}"></span>${dato.Telefono}</span>
+                    <p></p>
+                  </div>
+                  <div>
+                    <b>Código postal: </b><span id="zip${dato.id}"></span>${dato.Codigo_postal}</span>
+                    <p></p>
+                  </div>
+                  <div>
+                    <b>Precio: </b><span id="pre${dato.id}"></span>${dato.Precio}</span>
+                    <p></p>
+                  </div>
+                  <div>
+                    <b>Tipo: </b><span id="tip${dato.id}"> ${dato.Tipo}</span>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-action right-align">
+                <a href="#">Ver más</a>
+              </div>
+              </div>
+              <div hidden id="total">
+              </div>`
+          );
+        });
+      }
+    });
+  });
+/////////////////////////  Document Ready function /////////////////////////
+
+/////////////////////////  on change ciudad function /////////////////////////
+$('#formbuscar').on('change', (event) =>  {
   event.preventDefault();
-
+  let selectciudad = $('#selectciudad');
+  let selecttipo = $('#selecttipo');
   $.ajax({
     global: false,
-    type: 'POST',
-    url: '/',
-    dataType: 'html',
+    method: 'POST',
+    url: "/datos",
     data: {
-      vselectciudad: $("#selectciudad").val(),
-      vselecttipo: $("#selecttipo").val()
+      selectciudad: selectciudad.val(),
+      selecttipo: selecttipo.val()
     },
-    success: function () {
-      console.log('data cargada');
+    success: function(response) {
+      console.log("post response: ", response);        
+    },
+    error: function (err) {
+      console.log(err);
     }
   });
-  escribe($("#selectciudad").val(),"var1");
-  escribe($("#selecttipo").val(),"var2");
-  offid("proptodas");
-  onid("propbusqueda");
-})
-  
+});
+/////////////////////////  on change ciudad function /////////////////////////
 
-$("#selecttipo").change(function (event){
-  event.preventDefault();
 
-  $.ajax({
-    global: false,
-    type: 'POST',
-    url: '/',
-    dataType: 'html',
-    data: {
-      vselectciudad: $("#selectciudad").val(),
-      vselecttipo: $("#selecttipo").val()
-    },
-    success: function () {
-      console.log('data cargada');
-    }
-  });
-  $('#var1').val($("#selectciudad").val());
-  $('#var2').val($("#selecttipo").val());
-  console.log($('#var1').val());
-  //escribe($("#selectciudad").val(),"var1");
-  //escribe($("#selecttipo").val(),"var2");
-  offid("proptodas");
-  onid("propbusqueda");
-})
-  
-  
 
-function escribe(x,id){
-  var s = document.getElementById(id);
-  console.log(s,x,id);
-  s.value = x;
-  
-}   
+
+}); /////// End Main funtion
+
 
 
 function offid(id) {
@@ -93,46 +123,4 @@ function onid(id) {
 function mostrartodos() {
   onid("proptodas");
   offid("propbusqueda");
-}
-
-function escribir(r, ciu, tip, dir, tel, zip, pre) {
-
-
-  var mybody = '<div class="card horizontal">' +
-    '<div class="card-image">' +
-    '<img src="img/home.jpg">' +
-    '</div>' +
-    '<div class="card-stacked">' +
-    '<div class="card-content">' +
-    '<div>' +
-    '<b>Direccion: </b><span >' + dir + '</span><p></p>' +
-    '</div>' +
-    '<div>' +
-    '<b>Ciudad: </b> <span >' + ciu + '</span><p></p>' +
-    '</div>' +
-    '<div>' +
-    '<b>Telefono: </b><span >' + tel + '</span><p></p>' +
-    '</div>' +
-    '<div>' +
-    '<b>Código postal: </b><span >' + zip + '</span><p></p>' +
-    '</div>' +
-    '<div>' +
-    '<b>Precio: </b><span>' + pre + '</span><p></p>' +
-    '</div>' +
-    '<div>' +
-    '<b>Tipo: </b><span>' + tip + '</span><p></p>' +
-    '</div>' +
-    '</div>' +
-    '</div>' +
-    '<div class="card-action right-align">' +
-    '<a href="#">Ver más</a>' +
-    '</div>' +
-    '</div>' +
-    '<div hidden id="total-busqueda">' +
-    '</div>' +
-    '</div>';
-
-  r.insertAdjacentHTML('afterbegin', mybody);
-
-
 }
