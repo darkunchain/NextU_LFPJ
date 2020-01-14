@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
 const morgan =require('morgan');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+const session = require('express-session')
 
 
 // inicializacion
@@ -21,6 +22,8 @@ app.set('view engine', 'ejs');
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(session({secret: 'keyboard cat', resave: false, saveUninitialized: true}))
+
 
 // archivos estaticos
 app.use(express.static(path.join(__dirname, 'public')));

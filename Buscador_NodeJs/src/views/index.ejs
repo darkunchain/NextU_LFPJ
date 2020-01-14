@@ -75,7 +75,7 @@
       <div class="col m4">
         <div class="card horizontal">
           <div class="container center-align">
-              <%=tipos %>
+              <%=bodyciudad, bodytipo %>
 
           </div>
         </div>
@@ -137,7 +137,7 @@
         
         <% if (datos) { %>
         <% for(var i = 0; i < datos.length; i++) { %>
-          <% if (datos[i].Ciudad=="New York") { %>
+          <% if (datos[i].Ciudad == bodyciudad) { %>
         <div hidden class="card horizontal">
           <div class="card-image">
             <img src="img/home.jpg">
@@ -189,54 +189,13 @@
   
 
   <div hidden id="var1">
-    <script type="text/javascript">
-      var todos = document.getElementById('total').innerHTML;
-
-      for (var i = 0; i < todos; i++) {
-        document.getElementById('var1')[i] = document.getElementById('ciu' + i).innerHTML;
-      }         
-    </script>
+    document.getElementbyId(var1).value
   </div>
   <div hidden id="var2">
-    <script type="text/javascript">
-      var todos = document.getElementById('total').innerHTML;
-      for (var i = 0; i < todos; i++) {
-        document.getElementById('var2')[i] = document.getElementById('tip' + i).innerHTML;
-      }        
-    </script>
+
   </div>
-  <div hidden id="var3">
-    <script type="text/javascript">
-      var todos = document.getElementById('total').innerHTML;
-      for (var i = 0; i < todos; i++) {
-        document.getElementById('var3')[i] = document.getElementById('dir' + i).innerHTML;
-      }        
-    </script>
-  </div>
-  <div hidden id="var4">
-    <script type="text/javascript">
-      var todos = document.getElementById('total').innerHTML;
-      for (var i = 0; i < todos; i++) {
-        document.getElementById('var4')[i] = document.getElementById('tel' + i).innerHTML;
-      }        
-    </script>
-  </div>
-  <div hidden id="var5">
-    <script type="text/javascript">
-      var todos = document.getElementById('total').innerHTML;
-      for (var i = 0; i < todos; i++) {
-        document.getElementById('var5')[i] = document.getElementById('zip' + i).innerHTML;
-      }        
-    </script>
-  </div>
-  <div hidden id="var6">
-    <script type="text/javascript">
-      var todos = document.getElementById('total').innerHTML;
-      for (var i = 0; i < todos; i++) {
-        document.getElementById('var6')[i] = document.getElementById('pre' + i).innerHTML;
-      }        
-    </script>
-  </div>
+
+
   <div hidden id="datosall">
       <% async function newjson() { %>
         <% var newjson = [] %>

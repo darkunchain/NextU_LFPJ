@@ -22,26 +22,63 @@ function setSearch() {
 }
 setSearch()
 
-$("#selectciudad").change(function (){
-  var vselectciudad = $("#selectciudad").val();
-  var vselecttipo = $("#selecttipo").val();
-  console.log(vselectciudad,' , ',vselecttipo);
+$("#selectciudad").change(function (event){
+  event.preventDefault();
+
+  $.ajax({
+    global: false,
+    type: 'POST',
+    url: '/',
+    dataType: 'html',
+    data: {
+      vselectciudad: $("#selectciudad").val(),
+      vselecttipo: $("#selecttipo").val()
+    },
+    success: function () {
+      console.log('data cargada');
+    }
+  });
+  escribe($("#selectciudad").val(),"var1");
+  escribe($("#selecttipo").val(),"var2");
   offid("proptodas");
   onid("propbusqueda");
-  document.getElementById("formbuscar").submit();
-
 })
+  
 
-$("#selecttipo").change(function (){
-  var vselectciudad = $("#selectciudad").val();
-  var vselecttipo = $("#selecttipo").val();
-  console.log(vselectciudad,' , ',vselecttipo);
+$("#selecttipo").change(function (event){
+  event.preventDefault();
+
+  $.ajax({
+    global: false,
+    type: 'POST',
+    url: '/',
+    dataType: 'html',
+    data: {
+      vselectciudad: $("#selectciudad").val(),
+      vselecttipo: $("#selecttipo").val()
+    },
+    success: function () {
+      console.log('data cargada');
+    }
+  });
+  $('#var1').val($("#selectciudad").val());
+  $('#var2').val($("#selecttipo").val());
+  console.log($('#var1').val());
+  //escribe($("#selectciudad").val(),"var1");
+  //escribe($("#selecttipo").val(),"var2");
   offid("proptodas");
   onid("propbusqueda");
-  document.getElementById("formbuscar").submit();
-
-
 })
+  
+  
+
+function escribe(x,id){
+  var s = document.getElementById(id);
+  console.log(s,x,id);
+  s.value = x;
+  
+}   
+
 
 function offid(id) {
   var x = document.getElementById(id);

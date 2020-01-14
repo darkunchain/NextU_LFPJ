@@ -15,6 +15,9 @@ var datosall = []
 var precioall = []
 var inc1=0
 var inc2=0
+var bodytipo=''
+var bodyciudad=''
+var sess;
 
 
 async function arreglos() {
@@ -46,15 +49,31 @@ async function arreglos() {
 
 
 router.get('/', (req, res) => {  
-  res.render('index', { datos, ciudades, tipos, tiposall, ciudadesall, datosall, precioall })
+  sess=req.session;  
+  bodyciudad=sess.ciudad;
+  bodytipo=sess.tipo;
+  console.log('sess.ciudad: ', sess.ciudad, '  sess.tipo: ', sess.tipo)
+  res.render('index', { datos, ciudades, tipos, tiposall, ciudadesall, datosall, precioall, bodyciudad, bodytipo })  
+  
 });
 
 router.post('/', (req, res) => {  
-  let bodyciudad = req.body.selectciudad;
-  let bodytipo = req.body.selecttipo;
-  //res.send( { datos, ciudades, tipos, tiposall, ciudadesall, datosall, precioall,bodyciudad, bodytipo })
-  res.write('</body></html>');
-});
+  sess=req.session;
+  sess.ciudad = req.body.vselectciudad,
+  sess.tipo = req.body.vselecttipo
+  //console.log('bodyciudad: ', sess.ciudad, '  bodytipo: ', sess.tipo)  
+  res.redirect('/')
+})
+
+/* Ruta original
+router.post('/', (req, res) => {  
+  var bodyciudad = req.body.vselectciudad;
+  var bodytipo = req.body.vselecttipo;
+  //res.send( { bodyciudad, bodytipo })
+  //res.write('</body></html>');
+  //res.end('done')
+  //res.redirect('/');
+}); */
 
 
 router.get('/form', (req, res) => {  
