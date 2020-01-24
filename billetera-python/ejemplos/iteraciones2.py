@@ -16,4 +16,4 @@ while (i < 3):
                 total = total + float(cant) * float(cotiz)
     else:
         print("Moneda invalida.")
-print("El tota en USD que tiene el usuario es de ",str(total))
+print("El total en USD que tiene el usuario es de ",str(total))
