@@ -2,14 +2,15 @@ const { Router } = require('express')
 const router = Router()
 
 
-const { renderIndex, renderEvents, renderEventsUser} = require('../controllers/index_controller')
+const { renderIndex, renderLogin, miCuenta, renderAgenda} = require('../controllers/index_controller')
 
 router.get('/', renderIndex)
 
 
-router.get('/events', renderEvents)
+router.get('/login', renderLogin)
 
-router.get('/events/:user', renderEventsUser)
+router.get('/myaccount', miCuenta)
 
+router.get('/agenda', renderAgenda)
 
 module.exports = router

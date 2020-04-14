@@ -20,6 +20,13 @@ class EventManager {
         })
     }
 
+    actualizarEvento(evento) {
+        let eventId = evento.id
+        $.post('/events/edit/'+eventId, {id: eventId}, (response) => {
+            alert(response)
+        })
+    }
+
     guardarEvento() {
         $('.addButton').on('click', (ev) => {
             ev.preventDefault()
@@ -86,7 +93,7 @@ class EventManager {
                 center: 'title',
                 right: 'month,agendaWeek,basicDay'
             },
-            defaultDate: '2016-11-01',
+            defaultDate: '2020-04-22',
             navLinks: true,
             editable: true,
             eventLimit: true,
