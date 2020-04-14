@@ -22,9 +22,8 @@ app.use(express.urlencoded({extended: false}));
 
 
 //%%%%% Routes
-app.get('/', (req, res) => {
-    res.render('agenda');
-})
+app.use(require('./routes/index_routes'))
+app.use(require('./routes/event_routes'))
 
 //%%%%% Archivos estaticos
 app.use(express.static(path.join(__dirname , 'public')));
