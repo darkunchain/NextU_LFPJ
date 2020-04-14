@@ -1,21 +1,19 @@
 const { Schema, model } = require('mongoose')
+"America/Bogota"
 
 const eventoSchema = new Schema({
-    nombre: {
+    title: {
         type: String,
         required: true
     },
-    descripcion: String,
-    fechaInicio: {
+    start: {
         type: Date,
         required: true
     },
-    fechaFin: Date,
-    horaInicio: {
-        type: String,
-        required: true
-    },
-    horaFin: String,
+    end: {
+        type: Date,        
+        required: false
+    },    
     status: Boolean,
     completo: Boolean
 },{

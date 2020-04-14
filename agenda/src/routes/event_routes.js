@@ -10,9 +10,9 @@ router.post('/events/new', creaEvento)
 
 router.get('/events/all', verEventos)
 
-router.get('/events/edit/:id', editarEvento)
+router.post('/events/edit/:id', editarEvento)
 
-router.get('/events/delete/:id', borrarEvento)
+router.post('/events/delete/:id', borrarEvento)
 
 
 
