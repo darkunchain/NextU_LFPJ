@@ -2,12 +2,9 @@ const { Router } = require('express')
 const router = Router()
 
 
-const { renderIndex, renderLogin, miCuenta, renderAgenda} = require('../controllers/index_controller')
+const { renderIndex, miCuenta, renderAgenda} = require('../controllers/index_controller')
 
 router.get('/', renderIndex)
-
-
-router.get('/login', renderLogin)
 
 router.get('/myaccount', miCuenta)
 

@@ -1,11 +1,7 @@
 const indexCont = {}
 
 indexCont.renderIndex = (req, res) => {
-    res.render('index')
-}
-
-indexCont.renderLogin = (req, res) => {
-    res.send('login')
+    res.redirect('login')
 }
 
 indexCont.miCuenta = (req, res) => {

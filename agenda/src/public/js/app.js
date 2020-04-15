@@ -9,20 +9,27 @@ class EventManager {
     obtenerDataInicial() {
         let url = this.urlBase + "/all"
         $.get(url, (response) => {
+            console.log('response:',response)
             this.inicializarCalendario(response)
         })
     }
 
     eliminarEvento(evento) {
-        let eventId = evento.id
+        let eventId = evento._id
+        console.log('evento.id_eliminar:',eventId)
         $.post('/events/delete/'+eventId, {id: eventId}, (response) => {
+            console.log('response_eliminar:',response)
             alert(response)
         })
     }
 
     actualizarEvento(evento) {
-        let eventId = evento.id
-        $.post('/events/edit/'+eventId, {id: eventId}, (response) => {
+        let eventId = evento._id
+        let inicio = evento.start._d.toISOString()
+        let fin = evento.end._d.toISOString()        
+        console.log('evento.id_actualizar:',inicio,'final: ', fin)
+        $.post('/events/edit/'+eventId+'/'+inicio+'/'+fin, {id: eventId, inicio,fin}, (response) => {
+            console.log('response_actualizar:',response)
             alert(response)
         })
     }
@@ -118,7 +125,7 @@ class EventManager {
                 if (jsEvent.pageX >= x1 && jsEvent.pageX<= x2 &&
                     jsEvent.pageY >= y1 && jsEvent.pageY <= y2) {
                         this.eliminarEvento(event)
-                        $('.calendario').fullCalendar('removeEvents', event.id);
+                        $('.calendario').fullCalendar('removeEvents', event._id);
                     }
                 }
             })

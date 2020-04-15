@@ -14,7 +14,7 @@
             if (nombreUsuario.val() != "" && pass.val() != "") {
                 $.post('/login',{user: nombreUsuario.val(), pass: pass.val()}, function(response) {
                     if (response == "Validado") {
-                        window.location.href = "http://localhost:8090/"
+                        window.location.href = "http://localhost:8090/agenda"
                     }
                 })
             } else {

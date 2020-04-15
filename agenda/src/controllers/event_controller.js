@@ -1,27 +1,28 @@
-const event = require('../models/evento.model')
+const event = require('../models/evento_model')
 const eventCont = {}
 
 eventCont.creaEvento = async(req, res) => {    
     const { title, start, end } = req.body    
     const newEvent = new event({title, start, end, status:true, completo:false})
     await newEvent.save()    
-    res.send('nuevo evento')
 }
 
 eventCont.verEventos = async(req, res) => {
-    const misEventos = await event.find()
-    console.log('misEventos: ', misEventos)
-    res.send('mostrar eventos')
+    const misEventos = await event.find()    
+    res.send(misEventos)
 }
 
-eventCont.editarEvento = (req, res) => {
+eventCont.editarEvento = async(req, res) => {
     console.log('req.body_editar: ', req.body)
-    res.send('editar un evento')
+    const { id, inicio, fin } = req.body    
+    await event.updateOne({ _id:id }, { $set : { start:inicio, end:fin }});
+    //await event.save()    
 }
 
-eventCont.borrarEvento = (req, res) => {
-    console.log('req.body_borrar: ', req.body)
-    res.send('Borrar un evento')
+eventCont.borrarEvento = async (req, res) => {
+    console.log('req.body_borrar: ', req.body.id)
+    const { id } = req.body
+    await event.deleteOne({_id:id})
 }
 
 
