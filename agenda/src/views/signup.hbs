@@ -8,13 +8,14 @@
     </div>
     <script src="js/jquery.js"></script>
     <script>
-        var nombreUsuario = $('#user')
-        var pass = $('#pass')
+        var nombreUsuario = $('#newuser')
+        var pass = $('#newpass')
         $('.loginButton').on('click', function(event) {
             if (nombreUsuario.val() != "" && pass.val() != "") {
                 $.post('/signup',{user: nombreUsuario.val(), pass: pass.val()}, function(response) {
                     if (response == "Validado") {
-                        window.location.href = "http://localhost:8090/login"
+                        console.log('usuario validado')
+                        //window.location.href = "http://localhost:8090/login"
                     }
                 })
             } else {

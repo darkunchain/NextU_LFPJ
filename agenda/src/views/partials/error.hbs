@@ -1,0 +1,16 @@
+
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <h3>hola {{errors}}</h3>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+{{#each errors}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert1">
+  {{text}}
+  <button type="button" class="close" data-dismiss="alert1" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/each}}
