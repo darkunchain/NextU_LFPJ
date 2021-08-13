@@ -7,21 +7,24 @@ setInterval(blink_text, 1000);
 
 // Boton de inicio - Reinicio
 $(".btn-reinicio").click(function(){
+    $('#timer').timer('remove');
+    $('#text-over').html("");
     i=0;
     puntaje=0;
     movimientos=0;
     $(".panel-score").css("width","25%");
     $("#score-text").html("0");
     $("#movimientos-text").html("0");
-    $(this).html("REINICIAR");
+    $(this).html("Reiniciar");      
     $('#timer').timer({
 		countdown: true,
-		duration: '2m',
+		duration: '5s',
 		format: '%M:%S',
-		callback: function() {
-        alert('Acabó el tiempo!');
-        $('#timer').timer('reset');
-    	}
+		callback: function() {        
+        $('#text-over').html("<h1 class='text-over'>Se acabo el tiempo !!!</h1>");
+        //alert('Acabó el tiempo!');
+        $('#timer').timer('stop');        
+    	}      
 	});
   });
 
