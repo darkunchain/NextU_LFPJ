@@ -68,6 +68,8 @@ for (var r = 0; r < rows; r++) {
   grid[r] = [];
   for (var c = 0; c < cols; c++) {
     grid[r][c] = new candy(r, c, null, pickRandomCandy());
+    console.log('candy:',grid[r][c])
+    
   }
 }
 
@@ -144,6 +146,8 @@ function _onDrop(e) {
     console.log("intercambio " + sr + "," + sc + " to " + dr + "," + dc);
     // intercambio de gemas
     var tmp = grid[sr][sc].src;
+    console.log(' src:',src,'orFila',sr,'orCol',sc,'tablero[orFila][orCol]:',grid[sr][sc])
+    console.log('tmp:', tmp)
     grid[sr][sc].src = grid[dr][dc].src;
     grid[sr][sc].o.attr("src", grid[sr][sc].src);
     grid[dr][dc].src = tmp;

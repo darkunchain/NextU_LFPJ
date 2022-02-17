@@ -34,7 +34,7 @@ $(".btn-reinicio").click(function () {
 var filas = 7;
 var columnas = 7;
 var tablero = [];
-var figuras = 0;
+var figurasValidas = 0;
 var score = 0;
 var movimientos = 0;
 
@@ -59,6 +59,7 @@ for (var fila = 0; fila < filas; fila++) {
   tablero[fila] = [];
   for (var col = 0; col < columnas; col++) {
     tablero[fila][col] = new caramelo(fila, col, null, carameloAleatorio());
+    console.log('caramelo:',tablero[fila][col])
   }
 }
 
@@ -68,10 +69,10 @@ for (var fila = 0; fila < filas; fila++) {
   for (var col = 0; col < columnas; col++) {
     var celda = $("<img class='caramelo' id='caramelo_" + fila + "_" + col + "' fila='" + fila + "' columna='" + col +
       "'ondrop='soltar(event)' ondragover='arrastrarSobre(event)'src='" +
-      tablero[fila][col].nuevoCaramelo + "' style='height:" + altoCelda + "px'/>");
+      tablero[fila][col].src + "' style='height:" + altoCelda + "px'/>");
     celda.attr("ondragstart", "arrastrar(event)");
     $(".col-" + (col + 1)).append(celda);
-    tablero[fila][col].objeto = celda;
+    tablero[fila][col].objeto = celda;    
   }
 }
 
@@ -85,11 +86,11 @@ function carameloAleatorio() {
 }
 
 //nuevo caramelo
-function caramelo(fila, columna, objeto, nuevoCaramelo) {
+function caramelo(fila, columna, objeto, src) {
   return {
     fila: fila, // fila
     columna: columna,  // columna
-    nuevoCaramelo: nuevoCaramelo, // imagen
+    src: src, // imagen
     locked: false,
     combo: false,
     objeto: objeto
@@ -116,11 +117,11 @@ function soltar(dulce) {
     dulce.preventDefault();
   }
 
-  // obtener origen del dulce
-  var origen = dulce.dataTransfer.getData("text");
-  var orFila = origen.split("_")[1];
-  var orCol = origen.split("_")[2];
-
+  // obtener src del dulce
+  var src = dulce.dataTransfer.getData("text");  
+  var orFila = src.split("_")[1];
+  var orCol = src.split("_")[2];
+  
   // obtener destino del dulce
   var destino = dulce.target.id;
   var destFila = destino.split("_")[1];
@@ -133,12 +134,12 @@ function soltar(dulce) {
     alert("Movimiento no valido");
     return;
   }
-  else {
-    var tmp = tablero[orFila][orCol].origen;
-    tablero[orFila][orCol].origen = tablero[destFila][destCol].origen;
-    tablero[orFila][orCol].objeto.attr("src", tablero[orFila][orCol].origen);
-    tablero[destFila][destCol].origen = tmp;
-    tablero[destFila][destCol].objeto.attr("src", tablero[destFila][destCol].origen);
+  else {    
+    var tmp = tablero[orFila][orCol].src;    
+    tablero[orFila][orCol].src = tablero[destFila][destCol].src;
+    tablero[orFila][orCol].objeto.attr("src", tablero[orFila][orCol].src);
+    tablero[destFila][destCol].src = tmp;    
+    tablero[destFila][destCol].objeto.attr("src", tablero[destFila][destCol].src);
     
     // sumar un movimiento a mi cantidad
     movimientos += 1;
@@ -146,7 +147,6 @@ function soltar(dulce) {
 
     //buscar combinaciones
     comboOk();
-
   }
 
 
@@ -167,10 +167,9 @@ function comboOk() {
     var inicioDulces = null;
     var finDulces = null;
 
-    for (var col = 0; col < columnas; col++) {
-      console.log('locked: ',tablero[fila][col].locked, 'combo: ',tablero[fila][col].combo)
+    for (var col = 0; col < columnas; col++) {      
       // saltear candys locked o que estan en combo.    
-      if (tablero[fila][col].locked || tablero[fila][col].combo) {
+      if (tablero[fila][col].locked || tablero[fila][col].combo) {        
         inicioDulces = null;
         finDulces = null;
         celdaAnterior = null;
@@ -180,17 +179,18 @@ function comboOk() {
 
       // primer objeto del combo
       if (celdaAnterior == null) {
-        celdaAnterior = tablero[fila][col].origen;
+        celdaAnterior = tablero[fila][col].src;
         inicioDulces = col;
         numDulces = 1;
         finDulces = null;
         continue;
       }
       else {
-        // segundo o posterior objeto del combo
-        var celdaActual = tablero[fila][col].origen;
+        // siguiente objeto del combo
+        var celdaActual = tablero[fila][col].src;
+        console.log('celdaActual',celdaActual,' tablero:',tablero)
         if (!(celdaAnterior == celdaActual)) {
-          celdaAnterior = tablero[fila][col].origen;
+          celdaAnterior = tablero[fila][col].src;
           inicioDulces = col;
           finDulces = null;
           numDulces = 1;
@@ -200,7 +200,7 @@ function comboOk() {
           // incrementar combo
           numDulces += 1;
           if (numDulces == 3) {
-            validFigures += 1;
+            figurasValidas += 1;
             score += 10;
             $("#score-text").html(score);
             finDulces = col;
@@ -208,7 +208,7 @@ function comboOk() {
             for (var ci = inicioDulces; ci <= finDulces; ci++) {
 
               tablero[fila][ci].combo = true;
-              tablero[fila][ci].origen = null;
+              tablero[fila][ci].src = null;
             }
             celdaAnterior = null;
             inicioDulces = null;
@@ -242,16 +242,16 @@ function comboOk() {
       }
 
       if (celdaAnterior == null) {
-        celdaAnterior = tablero[fila][col].origen;
+        celdaAnterior = tablero[fila][col].src;
         inicioDulces = fila;
         numDulces = 1;
         finDulces = null;
         continue;
       }
       else {
-        var celdaActual = tablero[fila][col].origen;
+        var celdaActual = tablero[fila][col].src;
         if (!(celdaAnterior == celdaActual)) {
-          celdaAnterior = tablero[fila][col].origen;
+          celdaAnterior = tablero[fila][col].src;
           inicioDulces = fila;
           finDulces = null;
           numDulces = 1;
@@ -260,7 +260,7 @@ function comboOk() {
         else {
           numDulces += 1;
           if (numDulces == 3) {
-            validFigures += 1;
+            figurasValidas += 1;
             score += 10;
             $("#score-text").html(score);
             finDulces = fila;
@@ -268,7 +268,7 @@ function comboOk() {
             for (var ci = inicioDulces; ci <= finDulces; ci++) {
 
               tablero[ci][col].combo = true;
-              tablero[ci][col].origen = null;
+              tablero[ci][col].src = null;
             }
             celdaAnterior = null;
             inicioDulces = null;
@@ -316,7 +316,7 @@ function comboOk() {
 //desaparecer candys borrados
 function desaparecerCombos() {
   for (var fila = 0; fila < filas; fila++) {
-    for (var col = 0; col < cols; col++) {
+    for (var col = 0; col < columnas; col++) {
       if (tablero[fila][col].combo)  // celda vacia
       {
         tablero[fila][col].objeto.animate({
@@ -338,7 +338,7 @@ function desaparecerCombos() {
 function reponer() {
   // mover celdas vacias hacia arriba
   for (var fila = 0; fila < filas; fila++) {
-    for (var col = 0; col < cols; col++) {
+    for (var col = 0; col < columnas; col++) {
       if (tablero[fila][col].combo)  // celda vacia
       {
         tablero[fila][col].objeto.attr("src", "");
@@ -348,9 +348,9 @@ function reponer() {
         for (var orFila = fila; orFila >= 0; orFila--) {
           if (orFila == 0) break;
           if (tablero[orFila - 1][col].locked) break;
-          var tmp = tablero[orFila][col].origen;
-          tablero[orFila][col].origen = tablero[orFila - 1][col].origen;
-          tablero[orFila - 1][col].origen = tmp;
+          var tmp = tablero[orFila][col].src;
+          tablero[orFila][col].src = tablero[orFila - 1][col].src;
+          tablero[orFila - 1][col].src = tmp;
         }
       }
     }
@@ -358,11 +358,11 @@ function reponer() {
 
   // reordenando y reponiendo celdas
   for (var fila = 0; fila < filas; fila++) {
-    for (var col = 0; col < cols; col++) {
-      tablero[fila][col].objeto.attr("src", tablero[fila][col].origen);
+    for (var col = 0; col < columnas; col++) {
+      tablero[fila][col].objeto.attr("src", tablero[fila][col].src);
       tablero[fila][col].objeto.css("opacity", "1"); // acá podria meter animate
       tablero[fila][col].combo = false;
-      if (tablero[fila][col].origen == null)
+      if (tablero[fila][col].src == null)
         tablero[fila][col].respawn = true;
       if (tablero[fila][col].respawn == true) {
         tablero[fila][col].objeto.off("ondragover");
@@ -370,9 +370,9 @@ function reponer() {
         tablero[fila][col].objeto.off("ondragstart");
         tablero[fila][col].respawn = false; // repuesto!
         console.log("Reponiendo fila " + fila + " , columna " + col);
-        tablero[fila][col].origen = carameloAleatorio();
+        tablero[fila][col].src = carameloAleatorio();
         tablero[fila][col].locked = false;
-        tablero[fila][col].objeto.attr("src", tablero[fila][col].origen);
+        tablero[fila][col].objeto.attr("src", tablero[fila][col].src);
         tablero[fila][col].objeto.attr("ondragstart", "_ondragstart(event)");
         tablero[fila][col].objeto.attr("ondrop", "_onDrop(event)");
         tablero[fila][col].objeto.attr("ondragover", "_onDragOverEnabled(event)");
