@@ -11,7 +11,9 @@ module.exports = {
     },
 
     devServer:{
-        contentBase: './dist',
+        static: {
+            directory: path.join(__dirname, 'dist')
+        },
         port: 3000
     },
 
@@ -21,8 +23,8 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
-                query: {
-                    presets: ['react', 'env']
+                options: {
+                    presets: ['@babel/preset-env', '@babel/preset-react']
                 }
             },
             {
