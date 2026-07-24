@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-var exphbs  = require('express-handlebars');
+const { engine } = require('express-handlebars');
 const morgan = require('morgan')
 const flash = require('connect-flash')
 const session = require('express-session')
@@ -10,7 +10,7 @@ const app = express();
 //%%%%% Configuraciones
 app.set('port', process.env.PORT || 8090);
 app.set('views', path.join(__dirname , 'views'));
-app.engine('hbs', exphbs({
+app.engine('hbs', engine({
     defaultLayout: 'main',
     layoutsDir: path.join(app.get('views'), 'layouts'),
     partialsDir: path.join(app.get('views'), 'partials'),
@@ -22,9 +22,9 @@ app.set('view engine', '.hbs');
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 app.use(session({
-  secret: 'palabrasecreta',
-  resave: true,
-  saveUninitialized: true
+  secret: process.env.SESSION_SECRET || 'development-only-secret',
+  resave: false,
+  saveUninitialized: false
 }));
 app.use(flash());
 

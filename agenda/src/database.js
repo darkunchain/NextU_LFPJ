@@ -6,10 +6,6 @@ const MONGODB_URI = `mongodb://${AGENDA_HOST}/${AGENDA_DB}`;
 
 
 
-mongoose.connect(MONGODB_URI, {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useCreateIndex: true
-})
+mongoose.connect(MONGODB_URI)
     .then(db => console.log('Database conectada'))
     .catch(err => console.log(err));
